@@ -1,41 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-        }
-        h1 {
-            font-size: 5vw; /* Responsive font size */
-            font-weight: bold;
-            color: #333;
-            text-align: center;
-        }
-        /* Adjustments for smaller screens */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 8vw;
-            }
-        }
-        /* Adjustments for very small screens */
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 10vw;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danelle Hall | Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f7fa;
+      --text: #333;
+      --card-bg: #fff;
+      --accent: #1a73e8;
+      --shadow: rgba(0, 0, 0, 0.05);
+    }
+    [data-theme="dark"] {
+      --bg: #1a1a1a;
+      --text: #f0f0f0;
+      --card-bg: #2a2a2a;
+      --accent: #82b1ff;
+      --shadow: rgba(0, 0, 0, 0.3);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem;
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+    }
+    header p {
+      font-size: 1.1rem;
+    }
+    .theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      background: var(--accent);
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    section {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 5px 15px var(--shadow);
+    }
+    h2 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+  </style>
 </head>
 <body>
-    <h1>Website Coming Soon</h1>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+  <header>
+    <h1>Danelle Hall</h1>
+    <p>Student at Kathlyn Joy Gilliam Collegiate Academy | Lancaster, TX</p>
+  </header>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:dede121005@outlook.com">dede121005@outlook.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/danelle-hall-77944130b" target="_blank">linkedin.com/in/danelle-hall</a></p>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <p><strong>Kathlyn Joy Gilliam Collegiate Academy</strong></p>
+    <p>High School Diploma, 2020 – May 2024</p>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      <li>Certified In Cybersecurity</li>
+      <li>Course Pre-assessment</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Top Skills</h2>
+    <ul>
+      <li>Written Communication</li>
+      <li>Security Operations</li>
+      <li>Access Control</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Download</h2>
+    <p><a href="Profile.pdf" download>Download My Resume (PDF)</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Danelle Hall
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      if (currentTheme === "dark") {
+        document.documentElement.removeAttribute("data-theme");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
+  </script>
 </body>
 </html>
